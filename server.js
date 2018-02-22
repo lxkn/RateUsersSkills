@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var appRoutes = require('api')(router);
+var appRoutes = require('./api')(router);
+var mongoose = require('mongoose');
+var router = express.Router();
 
 app.use(bodyParser.json()); // for parsing json
 app.use('/api', appRoutes);
