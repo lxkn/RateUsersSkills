@@ -1,13 +1,18 @@
-<!DOCTYPE HTML>
-<html>
+<html ng-app="skills">
 	<head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<title>Rate User Skills</title>
 	</head>
-	<body ng-app="rateSkills" ng-controller="userController">
-		{{ hello }}
+	<body>
+		<ng-view></ng-view>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-	<script src="app.js"></script>
-	<script src="scripts/userController.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script src="/app.js"></script>
+	<script src="/controllers/panelController.js"></script>
+	<script src="/controllers/loginController.js"></script>
+	<script src="/controllers/registerController.js"></script>
+	<script src="/controllers/userDetailsController.js"></script>
+	<script src="/services/userService.js"></script>
+
 </html>

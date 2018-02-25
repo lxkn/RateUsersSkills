@@ -4,7 +4,6 @@ module.exports = function(router){
 
     router.post('/newuser', function(req,res){
         var user = new User();
-
         user.username = req.body.username;
         user.password = req.body.password;
         user.email = req.body.email;
@@ -31,7 +30,7 @@ module.exports = function(router){
 
     router.get('/getUsers', function(req,res){
 
-        User.find(function(err, reminders){
+        User.find(function(err, users){
             if(err){
                 res.send(err);
             }else{
@@ -40,4 +39,16 @@ module.exports = function(router){
         })
     });
 
+    router.get('/getUser/:username', function(req,res){
+
+        User.find(function(err, users){
+            if(err){
+                res.send(err);
+            }else{
+                res.json(users);
+            }
+        })
+    });
+
+    return router;
 }
